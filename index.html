@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Traffic Light (Broken)</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="traffic-light">
+        <div class="light off" id="red"></div>
+        <div class="light off" id="amber"></div>
+        <div class="light off" id="green"></div>
+      </div>
+      
+      <button id="changeBtn">Change</button>
 
-  <body>
-    <div id="controlPanel">
-      <h1 id="stopButton" class="button">Stop</h1>
-      <h1 id="slowButton" class="button">Slow</h1>
-      <h1 id="goButton" class="button">Go</h1>
-    </div>
-
-    <div id="traffic-light">
-      <div id="stopLight" class="bulb"></div>
-      <div id="slowLight" class="bulb"></div>
-      <div id="goLight" class="bulb"></div>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-  </body>
-</html>
+      <script src="./script.js"></script>
+    
+</body>
+</html
