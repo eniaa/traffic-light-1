@@ -1,37 +1,22 @@
-var lightStates = {red:0,amber:1,green:2};
-var currentState = lightStates.red;
+var allLights = document.getElementsByClassName("light")
+var yellowID = document.getElementById('yellow');
+var greenID = document.getElementById('green');
+var redID = document.getElementById('red');
 
-document.getElementById('changeBtn').onclick=function(){
-    changeState();
-};
-
-
-function changeState()
-{
-    clear();
-  switch(currentState)
-  {
-    case lightStates.red:
-    {
-      document.getElementById("red").className ="light red";
-      currentState =  lightStates.amber;
-    }
-      break;
-    case lightStates.amber:
-    {
-      document.getElementById("amber").className ="light amber";
-      currentState = lightStates.green;
-    } break;
-     case lightStates.green:
-    {
-      document.getElementById("green").className ="light green";
-      currentState = lightStates.red;
-    } break;
-   }
+for (var i = 0; i < allLights.length; i++){
+  allLights[i].addEventListener("click", displayLight);
 }
 
-function clear(){
-   document.getElementById("red").className ="light off";
-   document.getElementById("amber").className ="light off";
-   document.getElementById("green").className ="light off";
+function displayLight(e){  lightsOff();  if (e.target.id === 'red'){
+      redID.classList.add('light-visible');
+    } else if (e.target.id === 'yellow'){
+      yellowID.classList.add('light-visible');
+    } else {
+      greenID.classList.add('light-visible');
+    }
+  }
+function lightsOff() {
+  for (var i = 0; i < allLights.length; i++) {
+    allLights[i].classList.remove("light-visible");
+  }
 }
